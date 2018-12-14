@@ -36,6 +36,18 @@ module.exports = {
         ]
       },
       {
+        test: /\.css/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              url: true
+            }
+          }
+        ]
+      },
+      {
         test: /\.jpe?g$|\.ico$|\.gif$|\.png$|\.svg$/,
         use: [
           {

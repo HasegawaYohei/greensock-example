@@ -5,41 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Beautiful Web Animation with GreenSock</title>
-    <style>
-      body {
-        font-family: sans-serif;
-        background: #ddd;
-        text-align: center;
-      }
-      h1 {
-        text-align: center;
-        display: inline-block;
-        margin-top: 2rem;
-        font-size: 3rem;
-      }
-      .content {
-        height: 90vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-flow: column;
-      }
-      .logo {
-        width: 40vw;
-        display: block;
-        margin-top: 5vh;
-      }
-      .background {
-        background: url(img/star.svg) no-repeat center ;
-        background-size: contain;
-        width: 100%;
-        height: 100vh;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-      }
-    </style>
   </head>
   <body>
     <div class="wrapper">
@@ -49,37 +14,5 @@
       </div>
       <div class="background"></div>
     </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
-    <script>
-      // START HERE: Explanation of Syntax:
-      // TweenMax.to(target, duration, {vars});
-
-      // Examples Below:
-      // TweenMax.to('.logo', 1, {opacity:0});
-      // TweenMax.from('.logo', 1, {opacity:0});
-      // TweenMax.from('.logo', 1, {scale:.5});
-
-
-      // Animating Multiple Elements:
-      // TweenMax.from('.logo', 1, {scale:0});
-      // TweenMax.from('.background', 1, {opacity:0, scale:0, delay:1});
-      // TweenMax.from('h1', 1, {opacity:0, scale:2, delay:2});
-
-
-      // Using delays to manage longer animations is hard
-      // Instead, use a GSAP timeline to create a sequential chain of animations
-      // var timeline = new TimelineMax();
-      // timeline.from('.logo', .5, {scale:0})
-      // timeline.from('h1', .5, {opacity:0, scale:2})
-      // timeline.from('.background', .5, {scale:0})
-
-      // Easing
-      // Refer to https://greensock.com/ease-visualizer
-      // var timeline = new TimelineMax();
-      // timeline.from('.logo', 1, {scale:0, ease:Bounce.easeOut})
-      // timeline.from('.background', .3, {scale:0})
-      // timeline.from('h1', .7, {opacity:0, scale:2, ease:Back.easeOut.config(4)})
-    </script>
   </body>
 </html>
